@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3296DE81-FE13-4C86-853C-78F93BFB853B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pulser.ConsoleClient</RootNamespace>
+    <AssemblyName>Pulser.ConsoleClient</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ConsoleProgressBar, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ConsoleProgressBar.1.0.1\lib\net45\ConsoleProgressBar.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SimpleInjector">
+      <HintPath>..\packages\SimpleInjector.4.3.0\lib\net45\SimpleInjector.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Console, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Console.4.3.0\lib\net46\System.Console.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Reactive, Version=4.0.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.4.0.0\lib\net46\System.Reactive.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppSettingsProvider.cs" />
+    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Configuration.cs" />
+    <Compile Include="IReactiveLoader.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReactiveLoader.cs" />
+    <Compile Include="ReactiveObserver.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pulser.Common\Pulser.Common.csproj">
+      <Project>{87887f27-044a-47fb-a2ee-7fa5e40011eb}</Project>
+      <Name>Pulser.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pulser.Core\Pulser.Core.csproj">
+      <Project>{b3c2dc2b-3c51-41e6-8b5e-13009a0db7ba}</Project>
+      <Name>Pulser.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pulser.DAL\Pulser.DAL.csproj">
+      <Project>{cbce810a-73df-4ffd-bc0a-cabde0a4c592}</Project>
+      <Name>Pulser.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pulser.Db\Pulser.Db.csproj">
+      <Project>{adcb6c28-5d56-4708-806f-5a4b114d0570}</Project>
+      <Name>Pulser.Db</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pulser.PulseServiceEmulator\Pulser.PulseService.csproj">
+      <Project>{092cbe53-2be1-4723-a58a-32d3ae528a40}</Project>
+      <Name>Pulser.PulseService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pulser.Services\Pulser.Services.csproj">
+      <Project>{feb9e027-1aa2-4e31-a913-7f242ff59a99}</Project>
+      <Name>Pulser.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
