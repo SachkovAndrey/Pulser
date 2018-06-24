@@ -10,14 +10,17 @@ When the database is initialized, it creates entries about the sites to be monit
 ## Configuration
 
 Set the connection string (e.g.  <add key="ConnectionString" value="D:\Temp\MyData.db" />)
-in Pulser.ConsoleClient.App.Config  - <AppSettings> - <ConnectionString>
+in Pulser.ConsoleClient.App.Config 
+<AppSettings> <ConnectionString>
 
 For switch between pulse emulation and common implementation
 Set the "UsePulseEmulator" true or false (true by default) in 
-Pulser.ConsoleClient.App.Config - <AppSettings> - <UsePulseEmulator>
+Pulser.ConsoleClient.App.Config 
+<AppSettings> <UsePulseEmulator>
 
 Set the schedule interval in seconds (10 by default) for background loading and monitoring Sites in 
-Pulser.ConsoleClient.App.Config - <AppSettings> - <ObservableScheduleInterval>
+Pulser.ConsoleClient.App.Config 
+<AppSettings> <ObservableScheduleInterval>
 
 ## Projects Description
 
