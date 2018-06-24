@@ -9,7 +9,7 @@ When the database is initialized, it creates entries about the sites to be monit
 
 ## Configuration
 
-Set the connection string (e.g.  <add key="ConnectionString" value="D:\Temp\MyData.db" />)
+Set the connection string (e.g. add key="ConnectionString" value="D:\Temp\MyData.db")
 in Pulser.ConsoleClient.App.Config 
 AppSettings - ConnectionString
 
