@@ -3,7 +3,7 @@
 ## Application description
 
 The Pulser app allows you to monitor the availability of sites.
-The application works with the local LiteD database,
+The application works with the local LiteDb database,
 the database is created the first time the application is launched.
 When the database is initialized, it creates entries about the sites to be monitored. 
 
